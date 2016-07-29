@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="welcome.text">Dieser Text soll zeigen, wie Internationalisierung funktioniert.</entry>
+    <entry key="welcome.title">Java EE 7: Wilkommen bei unserem lustigen workshop!</entry>
+</properties>
