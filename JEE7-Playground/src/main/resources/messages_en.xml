@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-    <entry key="welcome.text">This is a prove, that the facelet can speak english too.</entry>
-    <entry key="welcome.title">Java EE 7: Welcome to our workshop!</entry>
-</properties>
