@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://xmlns.jcp.org/jsf/core">
 <body>
-    <ui:composition template="./WEB_INF/template.xhtml">
+    <f:view contracts="#{view.locale.language}">
+    <ui:composition template="/template.xhtml">
         <ui:define name="content">
-            <h1>#(msg['welcome.text'])</h1>
+            <h1>JEE7 Playground</h1>
             <b>Dies ist ein fetter statischer Text</b>
         </ui:define>
     </ui:composition>
+    </f:view>
 </body>
 </html>
