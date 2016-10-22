@@ -48,7 +48,7 @@ jboss/server/minimal/work/**/*
 *.ear
 
 # Gradle #
-*.gradle
+.gradle/
 build/
 
 ### Intellij+iml ###

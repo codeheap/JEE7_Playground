@@ -1,0 +1,22 @@
+project.description = 'Sample JEE7 REST Service'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'javax:javaee-api:7.0'
+}
+
+compileJava {
+    targetCompatibility = '1.8'
+    sourceCompatibility = '1.8'
+}
+
+
+task printProjectInfo << {
+println 'Running simple task for project ' +
+project.description
+}
