@@ -1,0 +1,55 @@
+buildscript {
+  version = System.getProperty('swarmVersion') ?: '2016.10.0'
+
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath "io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE"
+    classpath "org.wildfly.swarm:wildfly-swarm-plugin:$version"
+  }
+}
+
+plugins {
+  id "io.spring.dependency-management" version "0.6.1.RELEASE"
+}
+
+apply plugin: 'wildfly-swarm'
+apply plugin: 'java'
+apply plugin: 'application'
+
+project.description = 'Sample Wildfly Swarm self-hosted Pasadena REST Service'
+mainClassName = 'ch.froorider.cheesecakefactory_swarm.Application'
+
+swarm {
+  properties {
+    swarm.http.port = 8181
+  }
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  maven {
+    url 'https://maven.repository.redhat.com/nexus/content/repositories/thirdparty-releases/'
+  }
+}
+
+dependencyManagement {
+  imports {
+    mavenBom "org.wildfly.swarm:bom-all:$version"
+  }
+}
+
+dependencies {
+  compile "org.wildfly.swarm:jaxrs"
+  compile files('../cheesecakefactory_jeeservice/build/libs/cheesecakefactory_jeeservice.jar')
+}
+
+
+task printProjectInfo << {
+println 'Running simple task for project ' +
+project.description
+}

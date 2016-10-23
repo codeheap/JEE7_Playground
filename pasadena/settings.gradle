@@ -17,4 +17,5 @@ include 'services:webservice'
 */
 
 rootProject.name = 'pasadena'
+include 'cheesecakefactory:cheesecakefactory_swarm'
 include 'cheesecakefactory:cheesecakefactory_jeeservice'

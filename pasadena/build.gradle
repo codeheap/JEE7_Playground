@@ -30,3 +30,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 */
+/*project('cheesecakefactory:cheesecakefactory_swarm') {
+    dependencies {
+        compile project('cheesecakefactory:cheesecakefactory_jeeservice')
+    }
+}*/
