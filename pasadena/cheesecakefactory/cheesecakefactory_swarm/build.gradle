@@ -43,11 +43,6 @@ dependencyManagement {
   }
 }
 
-dependencies {
-  compile "org.wildfly.swarm:jaxrs"
-  compile files('../cheesecakefactory_jeeservice/build/libs/cheesecakefactory_jeeservice.jar')
-}
-
 
 task printProjectInfo << {
 println 'Running simple task for project ' +

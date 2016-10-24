@@ -30,8 +30,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 */
-/*project('cheesecakefactory:cheesecakefactory_swarm') {
+project('cheesecakefactory:cheesecakefactory_swarm') {
+    apply plugin: 'java'
     dependencies {
-        compile project('cheesecakefactory:cheesecakefactory_jeeservice')
+        compile "org.wildfly.swarm:jaxrs"
+        compile project(':cheesecakefactory:cheesecakefactory_jeeservice')
     }
-}*/
+}
