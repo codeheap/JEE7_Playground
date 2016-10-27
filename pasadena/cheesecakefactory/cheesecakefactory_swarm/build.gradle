@@ -43,6 +43,9 @@ dependencyManagement {
   }
 }
 
+dependencies{
+  compile "org.wildfly.swarm:jaxrs"
+}
 
 task printProjectInfo << {
 println 'Running simple task for project ' +
