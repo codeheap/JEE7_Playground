@@ -51,7 +51,7 @@ dependencies{
 }
 
 task startSwarm(type: Exec){
-  commandLine 'java', 'jar', './build/libs/cheesecakefactory_swarm-swarm.jar'
+  commandLine 'java', '-jar', './build/libs/cheesecakefactory_swarm-swarm.jar'
 }
 
 task printProjectInfo << {

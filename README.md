@@ -10,7 +10,7 @@ Wildfly Swarm package or a WAR wich can be deployed to an JEE7 AppServer or as a
 The different builds are made with Gradle.
 
 The following technologies are used:
-- JEE7 (Jax-RS)
+- JEE7 (Jax-RS / CDI)
 - Gradle 3 as build tool
 - Wildlfly Swarm
 - Docker
