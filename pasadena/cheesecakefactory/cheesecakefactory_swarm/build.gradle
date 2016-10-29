@@ -7,7 +7,7 @@ buildscript {
   }
 
   dependencies {
-    classpath "io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE"
+    classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
     classpath "org.wildfly.swarm:wildfly-swarm-plugin:$version"
   }
 }
@@ -35,6 +35,9 @@ repositories {
   maven {
     url 'https://maven.repository.redhat.com/nexus/content/repositories/thirdparty-releases/'
   }
+  maven{
+    url 'https://repository.jboss.org/nexus/content/repositories/releases/'
+  }
 }
 
 dependencyManagement {
@@ -44,7 +47,11 @@ dependencyManagement {
 }
 
 dependencies{
-  compile "org.wildfly.swarm:jaxrs"
+  compile "org.wildfly.swarm:jaxrs-cdi"
+}
+
+task startSwarm(type: Exec){
+  commandLine 'java', 'jar', './build/libs/cheesecakefactory_swarm-swarm.jar'
 }
 
 task printProjectInfo << {

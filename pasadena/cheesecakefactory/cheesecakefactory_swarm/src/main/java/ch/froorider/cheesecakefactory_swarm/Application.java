@@ -12,7 +12,6 @@ public class Application {
         Swarm swarm = new Swarm();
 
         JAXRSArchive deployment = ShrinkWrap.create(JAXRSArchive.class);
-        deployment.addClass(MealResource.class);
         deployment.addAllDependencies();
         swarm.start().deploy(deployment);
 
