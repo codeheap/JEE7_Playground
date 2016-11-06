@@ -54,6 +54,7 @@ dependencyManagement {
 
 dependencies{
   compile "org.wildfly.swarm:jaxrs-cdi"
+  compile "org.wildfly.swarm:logging"
   compile group: 'org.glassfish', name: 'javax.el-impl', version: '3.0.1-b08-jbossorg-1'
 }
 

@@ -28,6 +28,7 @@ public class MealResource {
 	@Path("/meals/{name}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Meal getMealByName(@PathParam("name") String mealName){
+		System.out.println("Looking for:"+mealName);
 		return service.getMealByName(mealName);
 	}
 

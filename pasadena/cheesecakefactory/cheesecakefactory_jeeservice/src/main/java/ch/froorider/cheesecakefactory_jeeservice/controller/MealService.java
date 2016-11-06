@@ -22,9 +22,12 @@ public class MealService {
 	}
 
 	public Meal getMealByName(String name) {
-		return this.meals.stream()
+		System.out.println("Looking for:"+name);
+		Meal foundMeal = this.meals.stream()
 				.filter(x -> x.getName().equalsIgnoreCase(name))
 				.findAny()
 				.get();
+		System.out.println("Found meal: "+foundMeal);
+		return foundMeal;
 	}
 }
