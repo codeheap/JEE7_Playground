@@ -4,6 +4,9 @@ buildscript {
   repositories {
     mavenLocal()
     mavenCentral()
+    maven{
+  	  url 'https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/'
+  	}
   }
 
   dependencies {
@@ -38,6 +41,9 @@ repositories {
   maven{
     url 'https://repository.jboss.org/nexus/content/repositories/releases/'
   }
+  maven{
+  	url 'https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/'
+  	}
 }
 
 dependencyManagement {
@@ -48,6 +54,7 @@ dependencyManagement {
 
 dependencies{
   compile "org.wildfly.swarm:jaxrs-cdi"
+  compile group: 'org.glassfish', name: 'javax.el-impl', version: '3.0.1-b08-jbossorg-1'
 }
 
 task startSwarm(type: Exec){
