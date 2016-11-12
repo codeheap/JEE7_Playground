@@ -25,7 +25,7 @@ public class MealResource {
 	}
 	
 	@GET
-	@Path("/meals/{name}")
+	@Path("{name}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Meal getMealByName(@PathParam("name") String mealName){
 		return service.getMealByName(mealName);
