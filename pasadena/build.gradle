@@ -33,7 +33,7 @@ dependencies {
 project('cheesecakefactory:cheesecakefactory_swarm') {
     apply plugin: 'java'
     dependencies {
-        compile "org.wildfly.swarm:jaxrs"
+        compile "org.wildfly.swarm:jaxrs-cdi"
         compile project(':cheesecakefactory:cheesecakefactory_jeeservice')
     }
 }
