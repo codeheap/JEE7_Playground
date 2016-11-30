@@ -27,7 +27,7 @@ public class MealService {
 				.filter(x -> x.getName().equalsIgnoreCase(name))
 				.findAny()
 				.get();
-		System.out.println("Found meal: "+foundMeal);
+		System.out.println("Found meal: "+foundMeal.getDescription());
 		return foundMeal;
 	}
 }

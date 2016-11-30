@@ -2,10 +2,10 @@ buildscript {
     repositories {
         mavenCentral()
         // The following is only necessary if you want to use SNAPSHOT releases.
-        // maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     }
     dependencies {
-        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M2'
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M3'
     }
 }
 
@@ -22,13 +22,23 @@ repositories {
 
 dependencies {
     compile 'javax:javaee-api:7.0'
-    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M2")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M2")
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M3")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M3")
+    testRuntime("org.apache.logging.log4j:log4j-core:2.6.2")
+    testRuntime("org.apache.logging.log4j:log4j-jul:2.6.2")
+    testCompile 'io.rest-assured:rest-assured:3.0.1'
 }
 
 compileJava {
     targetCompatibility = '1.8'
     sourceCompatibility = '1.8'
+}
+
+junitPlatform {
+    //platformVersion '1.0'
+    // enableStandardTestTask true
+    // reportsDir file('build/test-results/junit-platform') // this is the default
+    logManager 'org.apache.logging.log4j.jul.LogManager'
 }
 
 task printProjectInfo << {
