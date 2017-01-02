@@ -1,5 +1,5 @@
 buildscript {
-  version = System.getProperty('swarmVersion') ?: '2016.11.0'
+  version = System.getProperty('swarmVersion') ?: '2016.12.1'
 
   repositories {
     mavenLocal()
@@ -53,7 +53,8 @@ dependencyManagement {
 }
 
 dependencies{
-  compile "org.wildfly.swarm:jaxrs-cdi"
+  compile "org.wildfly.swarm:jaxrs"
+  compile "org.wildfly.swarm:cdi"
   compile "org.wildfly.swarm:logging"
   compile group: 'org.glassfish', name: 'javax.el-impl', version: '3.0.1-b08-jbossorg-1'
 }
